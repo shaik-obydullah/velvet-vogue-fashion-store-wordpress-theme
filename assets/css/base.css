@@ -1,0 +1,33 @@
+/*!
+ * =================================================================
+ * Theme Name: Velvet Vogue Fashion Store
+ * Version: 1.0.0
+ * Purpose: Core foundation styles — reset, typography, base elements
+ * =================================================================
+ */
+
+/* 1. Global Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Typography Defaults */
+* { font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+body {
+    background: #0f0f11;
+    color: #e4e4e7;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Elements */
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* 4. WordPress / WooCommerce body classes */
+body { overflow-x: hidden; }

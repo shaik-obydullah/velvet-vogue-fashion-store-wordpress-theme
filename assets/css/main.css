@@ -1,0 +1,384 @@
+/*!
+ * =================================================================
+ * Theme Name: Velvet Vogue Fashion Store
+ * Version: 1.0.0
+ * Purpose: Layout helpers (page templates, archive, single, sidebar)
+ * =================================================================
+ */
+
+/* 1. Breadcrumb wrapper */
+.vvfs-breadcrumb {
+    background: #0b0b0d;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.vvfs-breadcrumb .wrap {
+    padding: 1rem 0;
+}
+
+/* 2. Archive / Search Results */
+.vvfs-archive-header {
+    padding: 3rem 0 1rem;
+}
+.vvfs-archive-header h1 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* 3. Post cards (blog listing) */
+.vvfs-post-card {
+    background: #18181b;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.vvfs-post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(244,63,94,0.2);
+}
+.vvfs-post-card img {
+    border-radius: 0;
+}
+.vvfs-post-card h2 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.vvfs-post-card h2 a { color: #fff; transition: color 0.2s; }
+.vvfs-post-card h2 a:hover { color: #f43f5e; }
+.vvfs-post-card .meta {
+    color: #71717a;
+    font-size: 0.75rem;
+}
+.vvfs-post-card .excerpt {
+    color: #a1a1aa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+}
+
+/* 4. Single post */
+.vvfs-single-header h1 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.vvfs-single-content {
+    color: #d4d4d8;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.vvfs-single-content p { margin-bottom: 1.5rem; }
+.vvfs-single-content h2,
+.vvfs-single-content h3 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+.vvfs-single-content a { color: #f43f5e; }
+.vvfs-single-content a:hover { text-decoration: underline; }
+.vvfs-single-content img { border-radius: 0.75rem; margin: 1.5rem 0; }
+.vvfs-single-content blockquote {
+    border-left: 3px solid #f43f5e;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    color: #a1a1aa;
+    font-style: italic;
+}
+.vvfs-single-content ul,
+.vvfs-single-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #d4d4d8;
+}
+.vvfs-single-content ul { list-style: disc; }
+.vvfs-single-content ol { list-style: decimal; }
+.vvfs-single-content li { margin-bottom: 0.5rem; }
+
+/* 5. Sidebar */
+.vvfs-sidebar .widget {
+    background: #18181b;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.vvfs-sidebar .widget-title {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.vvfs-sidebar .widget a {
+    color: #a1a1aa;
+    transition: color 0.2s;
+}
+.vvfs-sidebar .widget a:hover { color: #f43f5e; }
+.vvfs-sidebar .widget ul { list-style: none; }
+.vvfs-sidebar .widget ul li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.vvfs-sidebar .widget ul li:last-child { border-bottom: none; }
+
+/* 6. 404 Page */
+.vvfs-404 {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+.vvfs-404 h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #f43f5e;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    line-height: 1;
+}
+.vvfs-404 h2 {
+    color: #fff;
+    font-size: 1.75rem;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin: 1rem 0;
+}
+.vvfs-404 p { color: #a1a1aa; max-width: 32rem; margin: 0 auto; }
+
+/* 7. Comments */
+.vvfs-comments-area h2 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin-bottom: 1.5rem;
+}
+.vvfs-comment {
+    background: #18181b;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+.vvfs-comment .comment-author {
+    color: #fff;
+    font-weight: 600;
+}
+.vvfs-comment .comment-meta {
+    color: #71717a;
+    font-size: 0.8rem;
+}
+.vvfs-comment .comment-content {
+    color: #d4d4d8;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+.vvfs-comment-respond h3 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+.vvfs-comment-respond input[type="text"],
+.vvfs-comment-respond input[type="email"],
+.vvfs-comment-respond textarea {
+    background: #18181b;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.vvfs-comment-respond textarea { min-height: 8rem; }
+.vvfs-comment-respond input[type="text"]:focus,
+.vvfs-comment-respond input[type="email"]:focus,
+.vvfs-comment-respond textarea:focus {
+    border-color: #f43f5e;
+    outline: none;
+}
+
+/* 8. Page template */
+.vvfs-page-content {
+    color: #d4d4d8;
+    line-height: 1.8;
+}
+.vvfs-page-content h1,
+.vvfs-page-content h2,
+.vvfs-page-content h3 {
+    color: #fff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+.vvfs-page-content a { color: #f43f5e; }
+.vvfs-page-content img { border-radius: 0.75rem; }
+
+/* 9. Search results */
+.vvfs-search-form input[type="search"] {
+    background: #18181b;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 9999px;
+    padding: 0.65rem 1.25rem;
+    width: 100%;
+    font-size: 0.95rem;
+}
+.vvfs-search-form input[type="search"]:focus {
+    border-color: #f43f5e;
+    outline: none;
+}
+
+/* ================================================================
+   10. SHOP SIDEBAR LAYOUT — matches product_listing.html
+   ================================================================ */
+.vvfs-shop-layout {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+@media (min-width: 1024px) {
+    .vvfs-shop-layout { gap: 2.5rem; }
+}
+
+/* Sidebar */
+.vvfs-shop-sidebar {
+    width: 100%;
+    flex-shrink: 0;
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+@media (min-width: 768px) {
+    .vvfs-shop-sidebar {
+        display: block;
+        width: 18rem;
+    }
+}
+@media (min-width: 1024px) {
+    .vvfs-shop-sidebar {
+        width: 20rem;
+    }
+}
+.vvfs-sidebar-inner {
+    position: sticky;
+    top: 7rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+/* Sidebar card */
+.vvfs-sidebar-card {
+    background: #18181b;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 1.5rem;
+}
+.vvfs-sidebar-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin-bottom: 1.25rem;
+}
+
+/* Filter buttons (categories) */
+.vvfs-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #d4d4d8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.vvfs-filter-btn:last-child { margin-bottom: 0; }
+.vvfs-filter-btn:hover {
+    background: rgba(255,255,255,0.06);
+}
+.vvfs-filter-btn.active {
+    background: rgba(244,63,94,0.1);
+    border-color: rgba(244,63,94,0.3);
+    color: #fb7185;
+    font-weight: 600;
+}
+
+/* Size buttons */
+.vvfs-size-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+    color: #d4d4d8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.vvfs-size-btn:hover,
+.vvfs-size-btn.active {
+    background: rgba(255,255,255,0.06);
+}
+
+/* Color buttons */
+.vvfs-color-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #27272a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 3px;
+}
+.vvfs-color-btn:hover {
+    border-color: rgba(255,255,255,0.3);
+}
+.vvfs-color-btn.active {
+    border-color: #fff;
+}
+.vvfs-color-btn span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Clear filters */
+.vvfs-clear-filters {
+    display: block;
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #a1a1aa;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.vvfs-clear-filters:hover {
+    background: #f43f5e;
+    color: #fff;
+    border-color: #f43f5e;
+}
+
+/* Main content area */
+.vvfs-shop-main {
+    flex: 1;
+    min-width: 0;
+}
