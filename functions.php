@@ -128,9 +128,12 @@ add_action( 'wp_enqueue_scripts', 'vvfs_wc_assets', 20 );
 /* ======================================================
    4b. Force Classic Checkout (disable Blocks checkout)
 ====================================================== */
-add_filter( 'woocommerce_blocks_support', '__return_false' );
+if ( class_exists( 'WooCommerce' ) ) {
+    add_filter( 'woocommerce_blocks_support', '__return_false' );
+}
 
 function vvfs_force_classic_checkout() {
+    if ( ! class_exists( 'WooCommerce' ) ) return;
     if ( ! is_checkout() ) return;
     global $post;
     if ( ! $post || has_blocks( $post->post_content ) ) {
@@ -142,6 +145,7 @@ function vvfs_force_classic_checkout() {
 add_action( 'wp', 'vvfs_force_classic_checkout', 1 );
 
 function vvfs_disable_order_confirmation_block_template( $templates ) {
+    if ( ! function_exists( 'is_wc_endpoint_url' ) ) return $templates;
     if ( is_wc_endpoint_url( 'order-received' ) ) {
         $order_templates = array();
         foreach ( $templates as $t ) {
@@ -158,6 +162,8 @@ add_filter( 'page_template_hierarchy', 'vvfs_disable_order_confirmation_block_te
 /* ======================================================
    5. WooCommerce Wrappers
 ====================================================== */
+if ( class_exists( 'WooCommerce' ) ) {
+
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
@@ -223,14 +229,6 @@ function vvfs_wc_products_header_end() {
 add_action( 'woocommerce_before_shop_loop', 'vvfs_wc_products_header_end', 35 );
 
 /* ======================================================
-   9. Excerpt Length
-====================================================== */
-function vvfs_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'vvfs_excerpt_length' );
-
-/* ======================================================
    10. Breadcrumb Separator
 ====================================================== */
 function vvfs_breadcrumb_defaults( $defaults ) {
@@ -257,6 +255,16 @@ function vvfs_hide_empty_products( $q ) {
     $q->set( 'meta_key', '_thumbnail_id' );
 }
 add_action( 'woocommerce_product_query', 'vvfs_hide_empty_products' );
+
+} // end class_exists('WooCommerce')
+
+/* ======================================================
+   9. Excerpt Length
+====================================================== */
+function vvfs_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'vvfs_excerpt_length' );
 
 /* ======================================================
    12. WooCommerce: AJAX Cart Fragments
@@ -482,6 +490,8 @@ add_action( 'customize_register', 'vvfs_customize_register' );
 /* ======================================================
    98. Enable COD gateway (hidden via CSS, not disabled)
 ====================================================== */
+if ( class_exists( 'WooCommerce' ) ) {
+
 function vvfs_enable_cod_gateway( $gateways ) {
     return $gateways;
 }
@@ -506,3 +516,5 @@ function vvfs_buy_now_redirect( $url ) {
     return $url;
 }
 add_filter( 'woocommerce_add_to_cart_redirect', 'vvfs_buy_now_redirect' );
+
+} // end class_exists('WooCommerce')

@@ -7,7 +7,7 @@
 
 get_header();
 
-$is_order_received = is_wc_endpoint_url( 'order-received' );
+$is_order_received = function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'order-received' );
 ?>
 
 <?php if ( $is_order_received ) : ?>
