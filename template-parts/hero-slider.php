@@ -49,7 +49,7 @@ $shop_url = $default_shop;
             $img_url = get_the_post_thumbnail_url( $slide->ID, 'vvfs-slider' )
                        ?: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&h=700&fit=crop&crop=center&auto=format';
           ?>
-          <div class="min-w-full flex flex-col md:flex-row items-center justify-between p-8 sm:p-12 md:p-20 lg:p-28">
+          <div class="min-w-full flex flex-col md:flex-row items-center justify-between mb-8 md:mb-0 p-8 sm:p-12 md:p-20 lg:p-28">
             <div class="md:w-1/2 text-center md:text-left order-2 md:order-1 mt-8 md:mt-0 z-10">
               <?php if ( $kicker ) : ?>
                 <span class="inline-block text-xs font-bold uppercase tracking-[0.25em] text-rose-500 bg-rose-500/10 px-4 py-2 rounded-full mb-6 border border-rose-500/20">
@@ -64,7 +64,7 @@ $shop_url = $default_shop;
                   <?php echo esc_html( $subtitle ); ?>
                 </p>
               <?php endif; ?>
-              <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+              <div class="mt-8 hidden md:flex flex-wrap gap-4 justify-center md:justify-start">
                 <a href="<?php echo esc_url( $shop_url ); ?>" class="btn-cart">
                   <?php esc_html_e( 'Shop Now', 'velvet-vogue-fashion-store' ); ?> <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -80,7 +80,7 @@ $shop_url = $default_shop;
 
         <?php else : ?>
           <!-- Fallback: single static hero -->
-          <div class="min-w-full flex flex-col md:flex-row items-center justify-between p-8 sm:p-12 md:p-20 lg:p-28">
+          <div class="min-w-full flex flex-col md:flex-row items-center justify-between mb-8 md:mb-0 p-8 sm:p-12 md:p-20 lg:p-28">
             <div class="md:w-1/2 text-center md:text-left order-2 md:order-1 mt-8 md:mt-0 z-10">
               <span class="inline-block text-xs font-bold uppercase tracking-[0.25em] text-rose-500 bg-rose-500/10 px-4 py-2 rounded-full mb-6 border border-rose-500/20">
                 <?php echo esc_html( $fb_kicker ); ?>
@@ -92,7 +92,7 @@ $shop_url = $default_shop;
               <p class="mt-6 text-base sm:text-lg text-zinc-400 max-w-lg mx-auto md:mx-0 font-light">
                 <?php echo esc_html( $fb_desc ); ?>
               </p>
-              <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+              <div class="mt-8 hidden md:flex flex-wrap gap-4 justify-center md:justify-start">
                 <?php if ( $fb_cta1_url ) : ?>
                   <a href="<?php echo esc_url( $fb_cta1_url ); ?>" class="btn-cart">
                     <?php echo esc_html( $fb_cta1_txt ); ?> <i class="fa-solid fa-arrow-right"></i>
@@ -115,7 +115,7 @@ $shop_url = $default_shop;
       </div>
 
       <!-- Dots -->
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20">
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex items-center gap-3 z-20">
         <?php
         $slide_count = ! empty( $slides ) ? count( $slides ) : 1;
         for ( $i = 0; $i < $slide_count; $i++ ) :
