@@ -3,12 +3,12 @@
  * Velvet Vogue Fashion Store — Theme Functions
  *
  * @package Velvet_Vogue_Fashion_Store
- * @version 1.3.8
+ * @version 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'VVFS_VERSION', '1.3.8' );
+define( 'VVFS_VERSION', '1.0.0' );
 define( 'VVFS_DIR', get_template_directory() );
 define( 'VVFS_URI', get_template_directory_uri() );
 
