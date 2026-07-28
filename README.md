@@ -25,6 +25,15 @@ A premium dark luxury WooCommerce theme for high-end fashion e-commerce, built b
 
 Velvet Vogue is a WooCommerce-first WordPress theme featuring a dark luxury aesthetic with rose accent branding, custom product pages, client-side filtering, and a complete end-to-end shopping experience — from homepage hero through checkout and order confirmation.
 
+![Theme Screenshot](screenshot.png)
+
+| Page | Preview |
+|---|---|
+| Homepage | ![Homepage](screenshots/Home.png) |
+| Shop | ![Shop](screenshots/Shop.png) |
+| Single Product | ![Single Product](screenshots/Single.png) |
+| Featured Products | ![Featured Products](screenshots/Featured_Products.png) |
+
 | Detail | Value |
 |---|---|
 | **Version** | 1.3.8 |
