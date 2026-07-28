@@ -156,7 +156,9 @@ document.addEventListener('DOMContentLoaded', function () {
     fd.append('product_id', productId);
     fd.append('quantity', 1);
 
-    var wcAjaxUrl = vvfsAjax.ajax_url.replace('/wp-admin/admin-ajax.php', '') + '/?wc-ajax=add_to_cart';
+    var wcAjaxUrl = (typeof vvfsAjax !== 'undefined' && vvfsAjax.ajax_url)
+      ? vvfsAjax.ajax_url.replace('wp-admin/admin-ajax.php', '') + '?wc-ajax=add_to_cart'
+      : '/?wc-ajax=add_to_cart';
 
     fetch(wcAjaxUrl, {
       method: 'POST',
@@ -256,7 +258,24 @@ document.addEventListener('DOMContentLoaded', function () {
       showLoader();
       if (loaderTimer) clearTimeout(loaderTimer);
       loaderTimer = setTimeout(function () {
-        runFilter();
+  /* --- Newsletter form --- */
+  var newsletterForm = document.getElementById('vvfs-newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for subscribing!');
+    });
+  }
+
+  /* --- Price filter form (prevent submission) --- */
+  var priceFilterForm = document.getElementById('vvfs-price-filter-form');
+  if (priceFilterForm) {
+    priceFilterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+    });
+  }
+
+  runFilter();
         setTimeout(hideLoader, 350);
       }, 400);
     } else {

@@ -209,7 +209,7 @@ if ( ! is_array( $footer_links ) )  $footer_links  = array();
         <?php if ( $newsletter_text ) : ?>
           <p class="text-sm text-zinc-500 mb-4 font-light"><?php echo esc_html( $newsletter_text ); ?></p>
         <?php endif; ?>
-        <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('<?php echo esc_js( __( 'Thank you for subscribing!', 'velvet-vogue-fashion-store' ) ); ?>');">
+        <form class="flex flex-col sm:flex-row gap-3" id="vvfs-newsletter-form">
           <input type="email" placeholder="<?php esc_attr_e( 'Your email address', 'velvet-vogue-fashion-store' ); ?>" class="flex-1 bg-zinc-900 border border-white/10 rounded-full px-5 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent" required />
           <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 whitespace-nowrap shadow-lg shadow-rose-500/30">
             <?php esc_html_e( 'Subscribe', 'velvet-vogue-fashion-store' ); ?>

@@ -29,17 +29,15 @@ do_action( 'woocommerce_cart_is_empty' );
         <i class="fa-solid fa-bag-shopping"></i> <?php esc_html_e( 'Start Shopping', 'velvet-vogue-fashion-store' ); ?>
       </a>
 
-      <?php do_action( 'woocommerce_cart_is_empty' ); ?>
-
       <?php if ( wc_get_page_id( 'myaccount' ) > 0 ) : ?>
         <p class="text-zinc-500 text-sm mt-8 font-light">
-          <?php
-          printf(
-              esc_html__( 'or %sreturn to shop%s', 'velvet-vogue-fashion-store' ),
-              '<a href="' . esc_url( wc_get_page_permalink( 'myaccount' ) ) . '" class="text-rose-500 hover:text-rose-400 transition">',
-              '</a>'
-          );
-          ?>
+      <?php
+      printf(
+          esc_html__( 'or %sreturn to shop%s', 'velvet-vogue-fashion-store' ),
+          '<a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" class="text-rose-500 hover:text-rose-400 transition">',
+          '</a>'
+      );
+      ?>
         </p>
       <?php endif; ?>
 

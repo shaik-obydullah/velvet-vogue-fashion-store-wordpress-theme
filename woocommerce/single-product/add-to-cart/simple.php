@@ -35,22 +35,20 @@ do_action( 'woocommerce_before_add_to_cart_button' );
     <label for="quantity_<?php echo esc_attr( $product->get_id() ); ?>" class="screen-reader-text"><?php esc_html_e( 'Quantity', 'velvet-vogue-fashion-store' ); ?></label>
     <input type="number"
            id="quantity_<?php echo esc_attr( $product->get_id() ); ?>"
-           class="input-text qty text"
+           class="input-text qty text vvfs-qty-input"
            step="<?php echo esc_attr( $product->get_quantity_input_step() ); ?>"
            min="<?php echo esc_attr( $min_quantity ); ?>"
            max="<?php echo $maximum_quantity ? esc_attr( $maximum_quantity ) : ''; ?>"
            name="quantity"
            value="<?php echo esc_attr( $product_quantity ); ?>"
            inputmode="numeric"
-           autocomplete="off"
-           style="width: 4.5rem; background: #18181b; color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.65rem; text-align: center; font-size: 1rem;" />
+           autocomplete="off" />
   </div>
 
   <button type="submit"
           name="add-to-cart"
           value="<?php echo esc_attr( $product->get_id() ); ?>"
-          class="single_add_to_cart_button btn-cart"
-          style="width: 100%; justify-content: center; padding: 0.95rem 2rem; font-size: 0.95rem;">
+          class="single_add_to_cart_button btn-cart vvfs-singl-atc-btn">
     <i class="fa-solid fa-bag-shopping"></i>
     <?php echo esc_html( $product->single_add_to_cart_text() ); ?>
   </button>

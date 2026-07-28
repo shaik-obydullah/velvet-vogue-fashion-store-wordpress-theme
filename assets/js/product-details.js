@@ -133,8 +133,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function tryMatchVariation() {
     var form = document.querySelector('.variations_form');
     if (!form) return;
-    var variationsData = form.data('product_variations');
-    if (!variationsData || variationsData === 'false') return;
+    var variationsRaw = form.getAttribute('data-product_variations');
+    if (!variationsRaw || variationsRaw === 'false') return;
+    var variationsData;
+    try { variationsData = JSON.parse(variationsRaw); } catch (e) { return; }
 
     var colorVal = colorInput ? colorInput.value : '';
     var sizeVal = sizeInput ? sizeInput.value : '';

@@ -143,7 +143,7 @@ $checkout = WC()->checkout();
               ) );
 
               woocommerce_form_field( 'billing_state', array(
-                'type'        => 'text',
+                'type'        => 'state',
                 'label'       => __( 'State / Province', 'woocommerce' ),
                 'placeholder' => __( 'NY', 'woocommerce' ),
                 'required'    => true,

@@ -19,20 +19,6 @@ $completed     = 'wc-completed' === $order->get_status();
 $email         = $order->get_billing_email();
 ?>
 
-<style>
-  @keyframes checkmark {
-    0% { transform: scale(0) rotate(-45deg); opacity: 0; }
-    50% { transform: scale(1.2) rotate(0deg); opacity: 1; }
-    100% { transform: scale(1) rotate(0deg); opacity: 1; }
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .vvfs-thankyou .animate-check { animation: checkmark 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-  .vvfs-thankyou .animate-fade-up { animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-</style>
-
 <!-- Progress Bar — all steps done -->
 <section class="vvfs-checkout-progress">
   <div class="vvfs-container">

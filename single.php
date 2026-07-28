@@ -20,7 +20,7 @@ get_header();
           &nbsp;&middot;&nbsp;
           <i class="fa-regular fa-folder mr-1"></i> <?php the_category( ', ' ); ?>
           &nbsp;&middot;&nbsp;
-          <i class="fa-regular fa-user mr-1"></i> <?php the_author(); ?>
+          <i class="fa-regular fa-user mr-1"></i> <?php echo esc_html( get_the_author() ); ?>
         </p>
         <h1><?php the_title(); ?></h1>
       </div>

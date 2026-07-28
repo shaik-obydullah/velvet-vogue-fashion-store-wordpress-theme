@@ -59,7 +59,7 @@
         </div>
         <input type="range" id="sidebarPriceRange" min="0" max="300" value="300" step="10"
                class="w-full accent-rose-500 cursor-pointer" />
-        <form class="flex gap-3" method="get" action="" onsubmit="return false;">
+        <form class="flex gap-3" id="vvfs-price-filter-form">
           <input type="number" name="min_price" id="priceMin" placeholder="Min" min="0" max="300"
                  class="w-1/2 bg-zinc-900 border border-white/10 text-white text-sm rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-rose-500" />
           <input type="number" name="max_price" id="priceMax" placeholder="Max" min="0" max="300" value="300"

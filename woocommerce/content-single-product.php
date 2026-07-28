@@ -60,7 +60,7 @@ if ( $color_attr && is_a( $color_attr, 'WC_Product_Attribute' ) ) {
             $color_options[] = array(
                 'name' => $term->name,
                 'slug' => $term->slug,
-                'hex'  => get_term_meta( $term->term_id, ' color_hex', true ) ?: '#888888',
+                'hex'  => get_term_meta( $term->term_id, 'color_hex', true ) ?: '#888888',
             );
         }
     }
@@ -126,7 +126,7 @@ function vvfs_product_image_html( $attachment_id, $product_id, $is_main = false 
         <a href="<?php echo esc_url( $cat_url ); ?>" class="hover:text-rose-500 transition"><?php echo esc_html( $cat_name ); ?></a>
       <?php endif; ?>
       <i class="fa-solid fa-chevron-right text-[0.6rem] text-zinc-700"></i>
-      <span class="text-zinc-300"><?php the_title(); ?></span>
+      <span class="text-zinc-300"><?php echo esc_html( get_the_title() ); ?></span>
     </nav>
   </div>
 </section>

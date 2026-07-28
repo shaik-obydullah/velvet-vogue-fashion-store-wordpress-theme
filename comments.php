@@ -56,34 +56,3 @@ if ( post_password_required() ) return;
 </div>
 
 <?php
-/**
- * Custom comment callback for wp_list_comments
- */
-function vvfs_comment_template( $comment, $args, $depth ) {
-    $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
-    ?>
-    <<?php echo esc_attr( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( 'vvfs-comment' ); ?>>
-      <div class="flex items-start gap-4">
-        <?php echo get_avatar( $comment, $args['avatar_size'], '', '', array( 'class' => 'rounded-full border-2 border-rose-500/30 flex-shrink-0' ) ); ?>
-        <div class="flex-1">
-          <div class="flex items-center gap-3 mb-1">
-            <span class="comment-author font-bold text-white font-serif"><?php comment_author(); ?></span>
-            <span class="comment-meta text-zinc-500 text-xs">
-              <i class="fa-regular fa-clock mr-1"></i><?php comment_date(); ?>
-            </span>
-          </div>
-          <div class="comment-content text-zinc-300 text-sm leading-relaxed mt-2">
-            <?php comment_text(); ?>
-          </div>
-          <?php
-          comment_reply_link( array_merge( $args, array(
-              'depth'     => $depth,
-              'max_depth' => $args['max_depth'],
-              'before'    => '<div class="mt-2">',
-              'after'     => '</div>',
-          ) ) );
-          ?>
-        </div>
-      </div>
-    <?php
-}
