@@ -40,8 +40,8 @@ Velvet Vogue is a WooCommerce-first WordPress theme featuring a dark luxury aest
 | **Author** | Shaik Obydullah |
 | **License** | GPL v2+ |
 | **Text Domain** | `velvet-vogue-fashion-store` |
-| **WordPress** | 6.0+ (tested up to 6.6) |
-| **PHP** | 8.0+ (tested up to 7.0) |
+| **WordPress** | 7+ (tested up to 7+) |
+| **PHP** | 8.0+ (tested up to 8.5) |
 | **WooCommerce** | 10.9.4+ |
 
 ---
@@ -88,8 +88,8 @@ Velvet Vogue is a WooCommerce-first WordPress theme featuring a dark luxury aest
 
 ## Requirements
 
-- WordPress 6.0+
-- PHP 8.0+ (tested up to 7.0)
+- WordPress 7+ (tested up to 7+)
+- PHP 8.0+ (tested up to 8.5)
 - WooCommerce 10.9.4+
 - MySQL 5.7+ or MariaDB 10.3+
 
